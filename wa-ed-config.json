@@ -1,0 +1,65 @@
+{
+  "primary_district_id": "17414",
+  "latest_assessment_year": 2025,
+  "benchmark_sets": [
+    {
+      "id": "DEFAULT",
+      "name": "LWSD's Benchmark Districts",
+      "districts": [
+        "17414", "17405", "6117", "17411", "17400", "17417", "27401", "31201", "17410", "17409"
+      ]
+    },
+    {
+      "id": "SMALL",
+      "name": "Small benchmark set",
+      "districts": ["17414", "17405"]
+    },
+    {
+      "id": "MEDIUM",
+      "name": "Medium benchmark set",
+      "districts": ["17414", "17405", "6117", "17411", "17400"]
+    }
+  ],
+  "assessment_sets": [
+    {
+      "year": 2015,
+      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+    },
+    {
+      "year": 2016,
+      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+    },
+    {
+      "year": 2017,
+      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+    },
+    {
+      "year": 2018,
+      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+    },
+    {
+      "year": 2019,
+      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+    },
+    {
+      "year": 2021,
+      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+    },
+    {
+      "year": 2022,
+      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+    },
+    {
+      "year": 2023,
+      "url": "https://data.wa.gov/api/v3/views/xh7m-utwp/query.json"
+    },
+    {
+      "year": 2024,
+      "url": "https://data.wa.gov/api/v3/views/x73g-mrqp/query.json"
+    },
+    {
+      "year": 2025,
+      "url": "https://data.wa.gov/api/v3/views/h5d9-vgwi/query.json"
+    }
+  ]
+}

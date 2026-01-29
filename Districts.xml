@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+    <rows>
+        <row _position="0">
+            <districtcode>10003</districtcode>
+            <districtname>Keller School District</districtname>
+        </row>
+        <row _position="1">
+            <districtcode>10050</districtcode>
+            <districtname>Curlew School District</districtname>
+        </row>
+        <row _position="2">
+            <districtcode>10065</districtcode>
+            <districtname>Orient School District</districtname>
+        </row>
+        <row _position="3">
+            <districtcode>10070</districtcode>
+            <districtname>Inchelium School District</districtname>
+        </row>
+        <row _position="4">
+            <districtcode>10309</districtcode>
+            <districtname>Republic School District</districtname>
+        </row>
+        <row _position="5">
+            <districtcode>11001</districtcode>
+            <districtname>Pasco School District</districtname>
+        </row>
+        <row _position="6">
+            <districtcode>11051</districtcode>
+            <districtname>North Franklin School District</districtname>
+        </row>
+        <row _position="7">
+            <districtcode>11056</districtcode>
+            <districtname>Kahlotus School District</districtname>
+        </row>
+        <row _position="8">
+            <districtcode>1109</districtcode>
+            <districtname>Washtucna School District</districtname>
+        </row>
+        <row _position="9">
+            <districtcode>1122</districtcode>
+            <districtname>Benge School District</districtname>
+        </row>
+        <row _position="10">
+            <districtcode>1147</districtcode>
+            <districtname>Othello School District</districtname>
+        </row>
+        <row _position="11">
+            <districtcode>1158</districtcode>
+            <districtname>Lind School District</districtname>
+        </row>
+        <row _position="12">
+            <districtcode>1160</districtcode>
+            <districtname>Ritzville School District</districtname>
+        </row>
+        <row _position="13">
+            <districtcode>11801</districtcode>
+            <districtname>ESD 123 acting as a school district</districtname>
+        </row>
+        <row _position="14">
+            <districtcode>12110</districtcode>
+            <districtname>Pomeroy School District</districtname>
+        </row>
+        <row _position="15">
+            <districtcode>13073</districtcode>
+            <districtname>Wahluke School District</districtname>
+        </row>
+        <row _position="16">
+            <districtcode>13144</districtcode>
+            <districtname>Quincy School District</districtname>
+        </row>
+        <row _position="17">
+            <districtcode>13146</districtcode>
+            <districtname>Warden School District</districtname>
+        </row>
+        <row _position="18">
+            <districtcode>13151</districtcode>
+            <districtname>Coulee-Hartline School District</districtname>
+        </row>
+        <row _position="19">
+            <districtcode>13156</districtcode>
+            <districtname>Soap Lake School District</districtname>
+        </row>
+        <row _position="20">
+            <districtcode>13160</districtcode>
+            <districtname>Royal School District</districtname>
+        </row>
+        <row _position="21">
+            <districtcode>13161</districtcode>
+            <districtname>Moses Lake School District</districtname>
+        </row>
+        <row _position="22">
+            <districtcode>13165</districtcode>
+            <districtname>Ephrata School District</districtname>
+        </row>
+        <row _position="23">
+            <districtcode>13167</districtcode>
+            <districtname>Wilson Creek School District</districtname>
+        </row>
+        <row _position="24">
+            <districtcode>13301</districtcode>
+            <districtname>Grand Coulee Dam School District</districtname>
+        </row>
+        <row _position="25">
+            <districtcode>14005</districtcode>
+            <districtname>Aberdeen School District</districtname>
+        </row>
+        <row _position="26">
+            <districtcode>14028</districtcode>
+            <districtname>Hoquiam School District</districtname>
+        </row>
+        <row _position="27">
+            <districtcode>14064</districtcode>
+            <districtname>North Beach School District No. 64</districtname>
+        </row>
+        <row _position="28">
+            <districtcode>14065</districtcode>
+            <districtname>McCleary School District</districtname>
+        </row>
+        <row _position="29">
+            <districtcode>14066</districtcode>
+            <districtname>Montesano School District</districtname>
+        </row>
+        <row _position="30">
+            <districtcode>14068</districtcode>
+            <districtname>Elma School District</districtname>
+        </row>
+        <row _position="31">
+            <districtcode>14077</districtcode>
+            <districtname>Taholah School District</districtname>
+        </row>
+        <row _position="32">
+            <districtcode>14097</districtcode>
+            <districtname>Lake Quinault School District</districtname>
+        </row>
+        <row _position="33">
+            <districtcode>14099</districtcode>
+            <districtname>Cosmopolis School District</districtname>
+        </row>
+        <row _position="34">
+            <districtcode>14104</districtcode>
+            <districtname>Satsop School District</districtname>
+        </row>
+        <row _position="35">
+            <districtcode>14117</districtcode>
+            <districtname>Wishkah Valley School District</districtname>
+        </row>
+        <row _position="36">
+            <districtcode>14172</districtcode>
+            <districtname>Ocosta School District</districtname>
+        </row>
+        <row _position="37">
+            <districtcode>14400</districtcode>
+            <districtname>Oakville School District</districtname>
+        </row>
+        <row _position="38">
+            <districtcode>15201</districtcode>
+            <districtname>Oak Harbor School District</districtname>
+        </row>
+        <row _position="39">
+            <districtcode>15204</districtcode>
+            <districtname>Coupeville School District</districtname>
+        </row>
+        <row _position="40">
+            <districtcode>15206</districtcode>
+            <districtname>South Whidbey School District</districtname>
+        </row>
+        <row _position="41">
+            <districtcode>16020</districtcode>
+            <districtname>Queets-Clearwater School District</districtname>
+        </row>
+        <row _position="42">
+            <districtcode>16046</districtcode>
+            <districtname>Brinnon School District</districtname>
+        </row>
+        <row _position="43">
+            <districtcode>16048</districtcode>
+            <districtname>Quilcene School District</districtname>
+        </row>
+        <row _position="44">
+            <districtcode>16049</districtcode>
+            <districtname>Chimacum School District</districtname>
+        </row>
+        <row _position="45">
+            <districtcode>16050</districtcode>
+            <districtname>Port Townsend School District</districtname>
+        </row>
+        <row _position="46">
+            <districtcode>17001</districtcode>
+            <districtname>Seattle School District No. 1</districtname>
+        </row>
+        <row _position="47">
+            <districtcode>17210</districtcode>
+            <districtname>Federal Way School District</districtname>
+        </row>
+        <row _position="48">
+            <districtcode>17216</districtcode>
+            <districtname>Enumclaw School District</districtname>
+        </row>
+        <row _position="49">
+            <districtcode>17400</districtcode>
+            <districtname>Mercer Island School District</districtname>
+        </row>
+        <row _position="50">
+            <districtcode>17401</districtcode>
+            <districtname>Highline School District</districtname>
+        </row>
+        <row _position="51">
+            <districtcode>17402</districtcode>
+            <districtname>Vashon Island School District</districtname>
+        </row>
+        <row _position="52">
+            <districtcode>17403</districtcode>
+            <districtname>Renton School District</districtname>
+        </row>
+        <row _position="53">
+            <districtcode>17404</districtcode>
+            <districtname>Skykomish School District</districtname>
+        </row>
+        <row _position="54">
+            <districtcode>17405</districtcode>
+            <districtname>Bellevue School District</districtname>
+        </row>
+        <row _position="55">
+            <districtcode>17406</districtcode>
+            <districtname>Tukwila School District</districtname>
+        </row>
+        <row _position="56">
+            <districtcode>17407</districtcode>
+            <districtname>Riverview School District</districtname>
+        </row>
+        <row _position="57">
+            <districtcode>17408</districtcode>
+            <districtname>Auburn School District</districtname>
+        </row>
+        <row _position="58">
+            <districtcode>17409</districtcode>
+            <districtname>Tahoma School District</districtname>
+        </row>
+        <row _position="59">
+            <districtcode>17410</districtcode>
+            <districtname>Snoqualmie Valley School District</districtname>
+        </row>
+        <row _position="60">
+            <districtcode>17411</districtcode>
+            <districtname>Issaquah School District</districtname>
+        </row>
+        <row _position="61">
+            <districtcode>17412</districtcode>
+            <districtname>Shoreline School District</districtname>
+        </row>
+        <row _position="62">
+            <districtcode>17414</districtcode>
+            <districtname>Lake Washington School District</districtname>
+        </row>
+        <row _position="63">
+            <districtcode>17415</districtcode>
+            <districtname>Kent School District</districtname>
+        </row>
+        <row _position="64">
+            <districtcode>17417</districtcode>
+            <districtname>Northshore School District</districtname>
+        </row>
+        <row _position="65">
+            <districtcode>17902</districtcode>
+            <districtname>Summit Public School: Sierra</districtname>
+        </row>
+        <row _position="66">
+            <districtcode>17903</districtcode>
+            <districtname>Muckleshoot Indian Tribe</districtname>
+        </row>
+        <row _position="67">
+            <districtcode>17905</districtcode>
+            <districtname>Summit Public School: Atlas</districtname>
+        </row>
+        <row _position="68">
+            <districtcode>17908</districtcode>
+            <districtname>Rainier Prep Charter School District</districtname>
+        </row>
+        <row _position="69">
+            <districtcode>17910</districtcode>
+            <districtname>Rainier Valley Leadership Academy</districtname>
+        </row>
+        <row _position="70">
+            <districtcode>17911</districtcode>
+            <districtname>Impact | Puget Sound Elementary</districtname>
+        </row>
+        <row _position="71">
+            <districtcode>17916</districtcode>
+            <districtname>Impact | Salish Sea Elementary</districtname>
+        </row>
+        <row _position="72">
+            <districtcode>17917</districtcode>
+            <districtname>Why Not You Academy</districtname>
+        </row>
+        <row _position="73">
+            <districtcode>17919</districtcode>
+            <districtname>Impact | Black River Elementary</districtname>
+        </row>
+        <row _position="74">
+            <districtcode>17937</districtcode>
+            <districtname>Lake Washington Institute of Technology</districtname>
+        </row>
+        <row _position="75">
+            <districtcode>17941</districtcode>
+            <districtname>Renton Technical College</districtname>
+        </row>
+        <row _position="76">
+            <districtcode>18100</districtcode>
+            <districtname>Bremerton School District</districtname>
+        </row>
+        <row _position="77">
+            <districtcode>18303</districtcode>
+            <districtname>Bainbridge Island School District</districtname>
+        </row>
+        <row _position="78">
+            <districtcode>18400</districtcode>
+            <districtname>North Kitsap School District</districtname>
+        </row>
+        <row _position="79">
+            <districtcode>18401</districtcode>
+            <districtname>Central Kitsap School District</districtname>
+        </row>
+        <row _position="80">
+            <districtcode>18402</districtcode>
+            <districtname>South Kitsap School District</districtname>
+        </row>
+        <row _position="81">
+            <districtcode>18801</districtcode>
+            <districtname>ESD 114 acting as a school district</districtname>
+        </row>
+        <row _position="82">
+            <districtcode>18901</districtcode>
+            <districtname>Catalyst Public Schools</districtname>
+        </row>
+        <row _position="83">
+            <districtcode>18902</districtcode>
+            <districtname>Suquamish Tribal Education Department</districtname>
+        </row>
+        <row _position="84">
+            <districtcode>19007</districtcode>
+            <districtname>Damman School District</districtname>
+        </row>
+        <row _position="85">
+            <districtcode>19028</districtcode>
+            <districtname>Easton School District</districtname>
+        </row>
+        <row _position="86">
+            <districtcode>19400</districtcode>
+            <districtname>Thorp School District</districtname>
+        </row>
+        <row _position="87">
+            <districtcode>19401</districtcode>
+            <districtname>Ellensburg School District</districtname>
+        </row>
+        <row _position="88">
+            <districtcode>19403</districtcode>
+            <districtname>Kittitas School District</districtname>
+        </row>
+        <row _position="89">
+            <districtcode>19404</districtcode>
+            <districtname>Cle Elum-Roslyn School District</districtname>
+        </row>
+        <row _position="90">
+            <districtcode>20094</districtcode>
+            <districtname>Wishram School District</districtname>
+        </row>
+        <row _position="91">
+            <districtcode>20203</districtcode>
+            <districtname>Bickleton School District</districtname>
+        </row>
+        <row _position="92">
+            <districtcode>20215</districtcode>
+            <districtname>Centerville School District</districtname>
+        </row>
+        <row _position="93">
+            <districtcode>20400</districtcode>
+            <districtname>Trout Lake School District</districtname>
+        </row>
+        <row _position="94">
+            <districtcode>20401</districtcode>
+            <districtname>Glenwood School District</districtname>
+        </row>
+        <row _position="95">
+            <districtcode>20402</districtcode>
+            <districtname>Klickitat School District</districtname>
+        </row>
+        <row _position="96">
+            <districtcode>20403</districtcode>
+            <districtname>Roosevelt School District</districtname>
+        </row>
+        <row _position="97">
+            <districtcode>20404</districtcode>
+            <districtname>Goldendale School District</districtname>
+        </row>
+        <row _position="98">
+            <districtcode>20405</districtcode>
+            <districtname>White Salmon Valley School District</districtname>
+        </row>
+        <row _position="99">
+            <districtcode>20406</districtcode>
+            <districtname>Lyle School District</districtname>
+        </row>
+        <row _position="100">
+            <districtcode>21014</districtcode>
+            <districtname>Napavine School District</districtname>
+        </row>
+        <row _position="101">
+            <districtcode>21036</districtcode>
+            <districtname>Evaline School District</districtname>
+        </row>
+        <row _position="102">
+            <districtcode>21206</districtcode>
+            <districtname>Mossyrock School District</districtname>
+        </row>
+        <row _position="103">
+            <districtcode>21214</districtcode>
+            <districtname>Morton School District</districtname>
+        </row>
+        <row _position="104">
+            <districtcode>21226</districtcode>
+            <districtname>Adna School District</districtname>
+        </row>
+        <row _position="105">
+            <districtcode>21232</districtcode>
+            <districtname>Winlock School District</districtname>
+        </row>
+        <row _position="106">
+            <districtcode>21234</districtcode>
+            <districtname>Boistfort School District</districtname>
+        </row>
+        <row _position="107">
+            <districtcode>21237</districtcode>
+            <districtname>Toledo School District</districtname>
+        </row>
+        <row _position="108">
+            <districtcode>21300</districtcode>
+            <districtname>Onalaska School District</districtname>
+        </row>
+        <row _position="109">
+            <districtcode>21301</districtcode>
+            <districtname>Pe Ell School District</districtname>
+        </row>
+        <row _position="110">
+            <districtcode>21302</districtcode>
+            <districtname>Chehalis School District</districtname>
+        </row>
+        <row _position="111">
+            <districtcode>21303</districtcode>
+            <districtname>White Pass School District</districtname>
+        </row>
+        <row _position="112">
+            <districtcode>21401</districtcode>
+            <districtname>Centralia School District</districtname>
+        </row>
+        <row _position="113">
+            <districtcode>22008</districtcode>
+            <districtname>Sprague School District</districtname>
+        </row>
+        <row _position="114">
+            <districtcode>22009</districtcode>
+            <districtname>Reardan-Edwall School District</districtname>
+        </row>
+        <row _position="115">
+            <districtcode>22017</districtcode>
+            <districtname>Almira School District</districtname>
+        </row>
+        <row _position="116">
+            <districtcode>22073</districtcode>
+            <districtname>Creston School District</districtname>
+        </row>
+        <row _position="117">
+            <districtcode>22105</districtcode>
+            <districtname>Odessa School District</districtname>
+        </row>
+        <row _position="118">
+            <districtcode>22200</districtcode>
+            <districtname>Wilbur School District</districtname>
+        </row>
+        <row _position="119">
+            <districtcode>22204</districtcode>
+            <districtname>Harrington School District</districtname>
+        </row>
+        <row _position="120">
+            <districtcode>22207</districtcode>
+            <districtname>Davenport School District</districtname>
+        </row>
+        <row _position="121">
+            <districtcode>2250</districtcode>
+            <districtname>Clarkston School District</districtname>
+        </row>
+        <row _position="122">
+            <districtcode>23042</districtcode>
+            <districtname>Southside School District</districtname>
+        </row>
+        <row _position="123">
+            <districtcode>23054</districtcode>
+            <districtname>Grapeview School District</districtname>
+        </row>
+        <row _position="124">
+            <districtcode>23309</districtcode>
+            <districtname>Shelton School District</districtname>
+        </row>
+        <row _position="125">
+            <districtcode>23311</districtcode>
+            <districtname>Mary M Knight School District</districtname>
+        </row>
+        <row _position="126">
+            <districtcode>23402</districtcode>
+            <districtname>Pioneer School District</districtname>
+        </row>
+        <row _position="127">
+            <districtcode>23403</districtcode>
+            <districtname>North Mason School District</districtname>
+        </row>
+        <row _position="128">
+            <districtcode>23404</districtcode>
+            <districtname>Hood Canal School District</districtname>
+        </row>
+        <row _position="129">
+            <districtcode>24014</districtcode>
+            <districtname>Nespelem School District</districtname>
+        </row>
+        <row _position="130">
+            <districtcode>24019</districtcode>
+            <districtname>Omak School District</districtname>
+        </row>
+        <row _position="131">
+            <districtcode>24105</districtcode>
+            <districtname>Okanogan School District</districtname>
+        </row>
+        <row _position="132">
+            <districtcode>24111</districtcode>
+            <districtname>Brewster School District</districtname>
+        </row>
+        <row _position="133">
+            <districtcode>24122</districtcode>
+            <districtname>Pateros School District</districtname>
+        </row>
+        <row _position="134">
+            <districtcode>2420</districtcode>
+            <districtname>Asotin-Anatone School District</districtname>
+        </row>
+        <row _position="135">
+            <districtcode>24350</districtcode>
+            <districtname>Methow Valley School District</districtname>
+        </row>
+        <row _position="136">
+            <districtcode>24404</districtcode>
+            <districtname>Tonasket School District</districtname>
+        </row>
+        <row _position="137">
+            <districtcode>24410</districtcode>
+            <districtname>Oroville School District</districtname>
+        </row>
+        <row _position="138">
+            <districtcode>24915</districtcode>
+            <districtname>Paschal Sherman Indian School</districtname>
+        </row>
+        <row _position="139">
+            <districtcode>25101</districtcode>
+            <districtname>Ocean Beach School District</districtname>
+        </row>
+        <row _position="140">
+            <districtcode>25116</districtcode>
+            <districtname>Raymond School District</districtname>
+        </row>
+        <row _position="141">
+            <districtcode>25118</districtcode>
+            <districtname>South Bend School District</districtname>
+        </row>
+        <row _position="142">
+            <districtcode>25155</districtcode>
+            <districtname>Naselle-Grays River Valley School District</districtname>
+        </row>
+        <row _position="143">
+            <districtcode>25160</districtcode>
+            <districtname>Willapa Valley School District</districtname>
+        </row>
+        <row _position="144">
+            <districtcode>25200</districtcode>
+            <districtname>North River School District</districtname>
+        </row>
+        <row _position="145">
+            <districtcode>26056</districtcode>
+            <districtname>Newport School District</districtname>
+        </row>
+        <row _position="146">
+            <districtcode>26059</districtcode>
+            <districtname>Cusick School District</districtname>
+        </row>
+        <row _position="147">
+            <districtcode>26070</districtcode>
+            <districtname>Selkirk School District</districtname>
+        </row>
+        <row _position="148">
+            <districtcode>27001</districtcode>
+            <districtname>Steilacoom Hist. School District</districtname>
+        </row>
+        <row _position="149">
+            <districtcode>27003</districtcode>
+            <districtname>Puyallup School District</districtname>
+        </row>
+        <row _position="150">
+            <districtcode>27010</districtcode>
+            <districtname>Tacoma School District</districtname>
+        </row>
+        <row _position="151">
+            <districtcode>27019</districtcode>
+            <districtname>Carbonado School District</districtname>
+        </row>
+        <row _position="152">
+            <districtcode>27083</districtcode>
+            <districtname>University Place School District</districtname>
+        </row>
+        <row _position="153">
+            <districtcode>27320</districtcode>
+            <districtname>Sumner-Bonney Lake School District</districtname>
+        </row>
+        <row _position="154">
+            <districtcode>27343</districtcode>
+            <districtname>Dieringer School District</districtname>
+        </row>
+        <row _position="155">
+            <districtcode>27344</districtcode>
+            <districtname>Orting School District</districtname>
+        </row>
+        <row _position="156">
+            <districtcode>27400</districtcode>
+            <districtname>Clover Park School District</districtname>
+        </row>
+        <row _position="157">
+            <districtcode>27401</districtcode>
+            <districtname>Peninsula School District</districtname>
+        </row>
+        <row _position="158">
+            <districtcode>27402</districtcode>
+            <districtname>Franklin Pierce School District</districtname>
+        </row>
+        <row _position="159">
+            <districtcode>27403</districtcode>
+            <districtname>Bethel School District</districtname>
+        </row>
+        <row _position="160">
+            <districtcode>27404</districtcode>
+            <districtname>Eatonville School District</districtname>
+        </row>
+        <row _position="161">
+            <districtcode>27416</districtcode>
+            <districtname>White River School District</districtname>
+        </row>
+        <row _position="162">
+            <districtcode>27417</districtcode>
+            <districtname>Fife School District</districtname>
+        </row>
+        <row _position="163">
+            <districtcode>27901</districtcode>
+            <districtname>Chief Leschi Schools</districtname>
+        </row>
+        <row _position="164">
+            <districtcode>27902</districtcode>
+            <districtname>Impact | Commencement Bay Elementary</districtname>
+        </row>
+        <row _position="165">
+            <districtcode>27905</districtcode>
+            <districtname>Summit Public School: Olympus</districtname>
+        </row>
+        <row _position="166">
+            <districtcode>27931</districtcode>
+            <districtname>Bates Technical College</districtname>
+        </row>
+        <row _position="167">
+            <districtcode>28010</districtcode>
+            <districtname>Shaw Island School District</districtname>
+        </row>
+        <row _position="168">
+            <districtcode>28137</districtcode>
+            <districtname>Orcas Island School District</districtname>
+        </row>
+        <row _position="169">
+            <districtcode>28144</districtcode>
+            <districtname>Lopez Island School District</districtname>
+        </row>
+        <row _position="170">
+            <districtcode>28149</districtcode>
+            <districtname>San Juan Island School District</districtname>
+        </row>
+        <row _position="171">
+            <districtcode>29011</districtcode>
+            <districtname>Concrete School District</districtname>
+        </row>
+        <row _position="172">
+            <districtcode>29100</districtcode>
+            <districtname>Burlington-Edison School District</districtname>
+        </row>
+        <row _position="173">
+            <districtcode>29101</districtcode>
+            <districtname>Sedro-Woolley School District</districtname>
+        </row>
+        <row _position="174">
+            <districtcode>29103</districtcode>
+            <districtname>Anacortes School District</districtname>
+        </row>
+        <row _position="175">
+            <districtcode>29311</districtcode>
+            <districtname>La Conner School District</districtname>
+        </row>
+        <row _position="176">
+            <districtcode>29317</districtcode>
+            <districtname>Conway School District</districtname>
+        </row>
+        <row _position="177">
+            <districtcode>29320</districtcode>
+            <districtname>Mount Vernon School District</districtname>
+        </row>
+        <row _position="178">
+            <districtcode>29801</districtcode>
+            <districtname>ESD 189 acting as a school district</districtname>
+        </row>
+        <row _position="179">
+            <districtcode>30002</districtcode>
+            <districtname>Skamania School District</districtname>
+        </row>
+        <row _position="180">
+            <districtcode>30029</districtcode>
+            <districtname>Mount Pleasant School District</districtname>
+        </row>
+        <row _position="181">
+            <districtcode>30031</districtcode>
+            <districtname>Mill A School District</districtname>
+        </row>
+        <row _position="182">
+            <districtcode>3017</districtcode>
+            <districtname>Kennewick School District</districtname>
+        </row>
+        <row _position="183">
+            <districtcode>30303</districtcode>
+            <districtname>Stevenson-Carson School District</districtname>
+        </row>
+        <row _position="184">
+            <districtcode>3050</districtcode>
+            <districtname>Paterson School District</districtname>
+        </row>
+        <row _position="185">
+            <districtcode>3052</districtcode>
+            <districtname>Kiona-Benton City School District</districtname>
+        </row>
+        <row _position="186">
+            <districtcode>3053</districtcode>
+            <districtname>Finley School District</districtname>
+        </row>
+        <row _position="187">
+            <districtcode>31002</districtcode>
+            <districtname>Everett School District</districtname>
+        </row>
+        <row _position="188">
+            <districtcode>31004</districtcode>
+            <districtname>Lake Stevens School District</districtname>
+        </row>
+        <row _position="189">
+            <districtcode>31006</districtcode>
+            <districtname>Mukilteo School District</districtname>
+        </row>
+        <row _position="190">
+            <districtcode>31015</districtcode>
+            <districtname>Edmonds School District</districtname>
+        </row>
+        <row _position="191">
+            <districtcode>31016</districtcode>
+            <districtname>Arlington School District</districtname>
+        </row>
+        <row _position="192">
+            <districtcode>31025</districtcode>
+            <districtname>Marysville School District</districtname>
+        </row>
+        <row _position="193">
+            <districtcode>31063</districtcode>
+            <districtname>Index Elementary School District 63</districtname>
+        </row>
+        <row _position="194">
+            <districtcode>31103</districtcode>
+            <districtname>Monroe School District</districtname>
+        </row>
+        <row _position="195">
+            <districtcode>3116</districtcode>
+            <districtname>Prosser School District</districtname>
+        </row>
+        <row _position="196">
+            <districtcode>31201</districtcode>
+            <districtname>Snohomish School District</districtname>
+        </row>
+        <row _position="197">
+            <districtcode>31306</districtcode>
+            <districtname>Lakewood School District</districtname>
+        </row>
+        <row _position="198">
+            <districtcode>31311</districtcode>
+            <districtname>Sultan School District</districtname>
+        </row>
+        <row _position="199">
+            <districtcode>31330</districtcode>
+            <districtname>Darrington School District</districtname>
+        </row>
+        <row _position="200">
+            <districtcode>31332</districtcode>
+            <districtname>Granite Falls School District</districtname>
+        </row>
+        <row _position="201">
+            <districtcode>31401</districtcode>
+            <districtname>Stanwood-Camano School District</districtname>
+        </row>
+        <row _position="202">
+            <districtcode>32081</districtcode>
+            <districtname>Spokane School District</districtname>
+        </row>
+        <row _position="203">
+            <districtcode>32123</districtcode>
+            <districtname>Orchard Prairie School District</districtname>
+        </row>
+        <row _position="204">
+            <districtcode>32312</districtcode>
+            <districtname>Great Northern School District</districtname>
+        </row>
+        <row _position="205">
+            <districtcode>32325</districtcode>
+            <districtname>Nine Mile Falls School District</districtname>
+        </row>
+        <row _position="206">
+            <districtcode>32326</districtcode>
+            <districtname>Medical Lake School District</districtname>
+        </row>
+        <row _position="207">
+            <districtcode>32354</districtcode>
+            <districtname>Mead School District</districtname>
+        </row>
+        <row _position="208">
+            <districtcode>32356</districtcode>
+            <districtname>Central Valley School District</districtname>
+        </row>
+        <row _position="209">
+            <districtcode>32358</districtcode>
+            <districtname>Freeman School District</districtname>
+        </row>
+        <row _position="210">
+            <districtcode>32360</districtcode>
+            <districtname>Cheney School District</districtname>
+        </row>
+        <row _position="211">
+            <districtcode>32361</districtcode>
+            <districtname>East Valley School District (Spokane)</districtname>
+        </row>
+        <row _position="212">
+            <districtcode>32362</districtcode>
+            <districtname>Liberty School District</districtname>
+        </row>
+        <row _position="213">
+            <districtcode>32363</districtcode>
+            <districtname>West Valley School District (Spokane)</districtname>
+        </row>
+        <row _position="214">
+            <districtcode>32414</districtcode>
+            <districtname>Deer Park School District</districtname>
+        </row>
+        <row _position="215">
+            <districtcode>32416</districtcode>
+            <districtname>Riverside School District</districtname>
+        </row>
+        <row _position="216">
+            <districtcode>32801</districtcode>
+            <districtname>ESD 101 acting as a school district</districtname>
+        </row>
+        <row _position="217">
+            <districtcode>32901</districtcode>
+            <districtname>Spokane International Academy</districtname>
+        </row>
+        <row _position="218">
+            <districtcode>32903</districtcode>
+            <districtname>Lumen Public School</districtname>
+        </row>
+        <row _position="219">
+            <districtcode>32907</districtcode>
+            <districtname>Innovation Spokane Schools</districtname>
+        </row>
+        <row _position="220">
+            <districtcode>33030</districtcode>
+            <districtname>Onion Creek School District</districtname>
+        </row>
+        <row _position="221">
+            <districtcode>33036</districtcode>
+            <districtname>Chewelah School District</districtname>
+        </row>
+        <row _position="222">
+            <districtcode>33049</districtcode>
+            <districtname>Wellpinit School District #49</districtname>
+        </row>
+        <row _position="223">
+            <districtcode>33070</districtcode>
+            <districtname>Valley School District</districtname>
+        </row>
+        <row _position="224">
+            <districtcode>33115</districtcode>
+            <districtname>Colville School District</districtname>
+        </row>
+        <row _position="225">
+            <districtcode>33183</districtcode>
+            <districtname>Loon Lake School District</districtname>
+        </row>
+        <row _position="226">
+            <districtcode>33202</districtcode>
+            <districtname>Summit Valley School District</districtname>
+        </row>
+        <row _position="227">
+            <districtcode>33205</districtcode>
+            <districtname>Evergreen School District (Stevens)</districtname>
+        </row>
+        <row _position="228">
+            <districtcode>33206</districtcode>
+            <districtname>Columbia (Stevens) School District</districtname>
+        </row>
+        <row _position="229">
+            <districtcode>33207</districtcode>
+            <districtname>Mary Walker School District</districtname>
+        </row>
+        <row _position="230">
+            <districtcode>33211</districtcode>
+            <districtname>Northport School District</districtname>
+        </row>
+        <row _position="231">
+            <districtcode>33212</districtcode>
+            <districtname>Kettle Falls School District</districtname>
+        </row>
+        <row _position="232">
+            <districtcode>3400</districtcode>
+            <districtname>Richland School District</districtname>
+        </row>
+        <row _position="233">
+            <districtcode>34002</districtcode>
+            <districtname>Yelm School District</districtname>
+        </row>
+        <row _position="234">
+            <districtcode>34003</districtcode>
+            <districtname>North Thurston Public Schools</districtname>
+        </row>
+        <row _position="235">
+            <districtcode>34033</districtcode>
+            <districtname>Tumwater School District</districtname>
+        </row>
+        <row _position="236">
+            <districtcode>34111</districtcode>
+            <districtname>Olympia School District</districtname>
+        </row>
+        <row _position="237">
+            <districtcode>34307</districtcode>
+            <districtname>Rainier School District</districtname>
+        </row>
+        <row _position="238">
+            <districtcode>34324</districtcode>
+            <districtname>Griffin School District</districtname>
+        </row>
+        <row _position="239">
+            <districtcode>34401</districtcode>
+            <districtname>Rochester School District</districtname>
+        </row>
+        <row _position="240">
+            <districtcode>34402</districtcode>
+            <districtname>Tenino School District</districtname>
+        </row>
+        <row _position="241">
+            <districtcode>34801</districtcode>
+            <districtname>ESD 113 acting as a school district</districtname>
+        </row>
+        <row _position="242">
+            <districtcode>34901</districtcode>
+            <districtname>WA HE LUT Indian School Agency</districtname>
+        </row>
+        <row _position="243">
+            <districtcode>34974</districtcode>
+            <districtname>Office of the Governor (Sch for Blind)</districtname>
+        </row>
+        <row _position="244">
+            <districtcode>34975</districtcode>
+            <districtname>Washington Center for Deaf and Hard of Hearing Youth</districtname>
+        </row>
+        <row _position="245">
+            <districtcode>34979</districtcode>
+            <districtname>Washington Military Department</districtname>
+        </row>
+        <row _position="246">
+            <districtcode>35200</districtcode>
+            <districtname>Wahkiakum School District</districtname>
+        </row>
+        <row _position="247">
+            <districtcode>36101</districtcode>
+            <districtname>Dixie School District</districtname>
+        </row>
+        <row _position="248">
+            <districtcode>36140</districtcode>
+            <districtname>Walla Walla Public Schools</districtname>
+        </row>
+        <row _position="249">
+            <districtcode>36250</districtcode>
+            <districtname>College Place School District</districtname>
+        </row>
+        <row _position="250">
+            <districtcode>36300</districtcode>
+            <districtname>Touchet School District</districtname>
+        </row>
+        <row _position="251">
+            <districtcode>36400</districtcode>
+            <districtname>Columbia (Walla Walla) School District</districtname>
+        </row>
+        <row _position="252">
+            <districtcode>36401</districtcode>
+            <districtname>Waitsburg School District</districtname>
+        </row>
+        <row _position="253">
+            <districtcode>36402</districtcode>
+            <districtname>Prescott School District</districtname>
+        </row>
+        <row _position="254">
+            <districtcode>37501</districtcode>
+            <districtname>Bellingham School District</districtname>
+        </row>
+        <row _position="255">
+            <districtcode>37502</districtcode>
+            <districtname>Ferndale School District</districtname>
+        </row>
+        <row _position="256">
+            <districtcode>37503</districtcode>
+            <districtname>Blaine School District</districtname>
+        </row>
+        <row _position="257">
+            <districtcode>37504</districtcode>
+            <districtname>Lynden School District</districtname>
+        </row>
+        <row _position="258">
+            <districtcode>37505</districtcode>
+            <districtname>Meridian School District</districtname>
+        </row>
+        <row _position="259">
+            <districtcode>37506</districtcode>
+            <districtname>Nooksack Valley School District</districtname>
+        </row>
+        <row _position="260">
+            <districtcode>37507</districtcode>
+            <districtname>Mount Baker School District</districtname>
+        </row>
+        <row _position="261">
+            <districtcode>37902</districtcode>
+            <districtname>Intergenerational High School</districtname>
+        </row>
+        <row _position="262">
+            <districtcode>37903</districtcode>
+            <districtname>Lummi Tribal Agency</districtname>
+        </row>
+        <row _position="263">
+            <districtcode>38126</districtcode>
+            <districtname>LaCrosse School District</districtname>
+        </row>
+        <row _position="264">
+            <districtcode>38264</districtcode>
+            <districtname>Lamont School District</districtname>
+        </row>
+        <row _position="265">
+            <districtcode>38265</districtcode>
+            <districtname>Tekoa School District</districtname>
+        </row>
+        <row _position="266">
+            <districtcode>38267</districtcode>
+            <districtname>Pullman School District</districtname>
+        </row>
+        <row _position="267">
+            <districtcode>38300</districtcode>
+            <districtname>Colfax School District</districtname>
+        </row>
+        <row _position="268">
+            <districtcode>38301</districtcode>
+            <districtname>Palouse School District</districtname>
+        </row>
+        <row _position="269">
+            <districtcode>38302</districtcode>
+            <districtname>Garfield School District</districtname>
+        </row>
+        <row _position="270">
+            <districtcode>38304</districtcode>
+            <districtname>Steptoe School District</districtname>
+        </row>
+        <row _position="271">
+            <districtcode>38306</districtcode>
+            <districtname>Colton School District</districtname>
+        </row>
+        <row _position="272">
+            <districtcode>38308</districtcode>
+            <districtname>Endicott School District</districtname>
+        </row>
+        <row _position="273">
+            <districtcode>38320</districtcode>
+            <districtname>Rosalia School District</districtname>
+        </row>
+        <row _position="274">
+            <districtcode>38322</districtcode>
+            <districtname>St. John School District</districtname>
+        </row>
+        <row _position="275">
+            <districtcode>38324</districtcode>
+            <districtname>Oakesdale School District</districtname>
+        </row>
+        <row _position="276">
+            <districtcode>39002</districtcode>
+            <districtname>Union Gap School District</districtname>
+        </row>
+        <row _position="277">
+            <districtcode>39003</districtcode>
+            <districtname>Naches Valley School District</districtname>
+        </row>
+        <row _position="278">
+            <districtcode>39007</districtcode>
+            <districtname>Yakima School District</districtname>
+        </row>
+        <row _position="279">
+            <districtcode>39090</districtcode>
+            <districtname>East Valley School District (Yakima)</districtname>
+        </row>
+        <row _position="280">
+            <districtcode>39119</districtcode>
+            <districtname>Selah School District</districtname>
+        </row>
+        <row _position="281">
+            <districtcode>39120</districtcode>
+            <districtname>Mabton School District</districtname>
+        </row>
+        <row _position="282">
+            <districtcode>39200</districtcode>
+            <districtname>Grandview School District</districtname>
+        </row>
+        <row _position="283">
+            <districtcode>39201</districtcode>
+            <districtname>Sunnyside School District</districtname>
+        </row>
+        <row _position="284">
+            <districtcode>39202</districtcode>
+            <districtname>Toppenish School District</districtname>
+        </row>
+        <row _position="285">
+            <districtcode>39203</districtcode>
+            <districtname>Highland School District</districtname>
+        </row>
+        <row _position="286">
+            <districtcode>39204</districtcode>
+            <districtname>Granger School District</districtname>
+        </row>
+        <row _position="287">
+            <districtcode>39205</districtcode>
+            <districtname>Zillah School District</districtname>
+        </row>
+        <row _position="288">
+            <districtcode>39207</districtcode>
+            <districtname>Wapato School District</districtname>
+        </row>
+        <row _position="289">
+            <districtcode>39208</districtcode>
+            <districtname>West Valley School District (Yakima)</districtname>
+        </row>
+        <row _position="290">
+            <districtcode>39209</districtcode>
+            <districtname>Mount Adams School District</districtname>
+        </row>
+        <row _position="291">
+            <districtcode>39801</districtcode>
+            <districtname>ESD 105 acting as a school district</districtname>
+        </row>
+        <row _position="292">
+            <districtcode>4019</districtcode>
+            <districtname>Manson School District</districtname>
+        </row>
+        <row _position="293">
+            <districtcode>4069</districtcode>
+            <districtname>Stehekin School District</districtname>
+        </row>
+        <row _position="294">
+            <districtcode>4127</districtcode>
+            <districtname>Entiat School District</districtname>
+        </row>
+        <row _position="295">
+            <districtcode>4129</districtcode>
+            <districtname>Lake Chelan School District</districtname>
+        </row>
+        <row _position="296">
+            <districtcode>4222</districtcode>
+            <districtname>CASHMERE SCHOOL DISTRICT</districtname>
+        </row>
+        <row _position="297">
+            <districtcode>4228</districtcode>
+            <districtname>Cascade School District</districtname>
+        </row>
+        <row _position="298">
+            <districtcode>4246</districtcode>
+            <districtname>Wenatchee School District</districtname>
+        </row>
+        <row _position="299">
+            <districtcode>4901</districtcode>
+            <districtname>Pinnacles Prep Charter School</districtname>
+        </row>
+        <row _position="300">
+            <districtcode>5121</districtcode>
+            <districtname>Port Angeles School District</districtname>
+        </row>
+        <row _position="301">
+            <districtcode>5313</districtcode>
+            <districtname>Crescent School District</districtname>
+        </row>
+        <row _position="302">
+            <districtcode>5323</districtcode>
+            <districtname>Sequim School District</districtname>
+        </row>
+        <row _position="303">
+            <districtcode>5401</districtcode>
+            <districtname>Cape Flattery School District</districtname>
+        </row>
+        <row _position="304">
+            <districtcode>5402</districtcode>
+            <districtname>Quillayute Valley School District</districtname>
+        </row>
+        <row _position="305">
+            <districtcode>5903</districtcode>
+            <districtname>Quileute Tribal School District</districtname>
+        </row>
+        <row _position="306">
+            <districtcode>6037</districtcode>
+            <districtname>Vancouver School District</districtname>
+        </row>
+        <row _position="307">
+            <districtcode>6098</districtcode>
+            <districtname>Hockinson School District</districtname>
+        </row>
+        <row _position="308">
+            <districtcode>6101</districtcode>
+            <districtname>La Center School District</districtname>
+        </row>
+        <row _position="309">
+            <districtcode>6103</districtcode>
+            <districtname>Green Mountain School District</districtname>
+        </row>
+        <row _position="310">
+            <districtcode>6112</districtcode>
+            <districtname>Washougal School District</districtname>
+        </row>
+        <row _position="311">
+            <districtcode>6114</districtcode>
+            <districtname>Evergreen School District (Clark)</districtname>
+        </row>
+        <row _position="312">
+            <districtcode>6117</districtcode>
+            <districtname>Camas School District</districtname>
+        </row>
+        <row _position="313">
+            <districtcode>6119</districtcode>
+            <districtname>Battle Ground School District</districtname>
+        </row>
+        <row _position="314">
+            <districtcode>6122</districtcode>
+            <districtname>Ridgefield School District</districtname>
+        </row>
+        <row _position="315">
+            <districtcode>6801</districtcode>
+            <districtname>ESD 112 acting as a school district</districtname>
+        </row>
+        <row _position="316">
+            <districtcode>6901</districtcode>
+            <districtname>Rooted School Washington</districtname>
+        </row>
+        <row _position="317">
+            <districtcode>7002</districtcode>
+            <districtname>Dayton School District</districtname>
+        </row>
+        <row _position="318">
+            <districtcode>7035</districtcode>
+            <districtname>Starbuck School District</districtname>
+        </row>
+        <row _position="319">
+            <districtcode>8122</districtcode>
+            <districtname>Longview School District</districtname>
+        </row>
+        <row _position="320">
+            <districtcode>8130</districtcode>
+            <districtname>Toutle Lake School District</districtname>
+        </row>
+        <row _position="321">
+            <districtcode>8401</districtcode>
+            <districtname>Castle Rock School District</districtname>
+        </row>
+        <row _position="322">
+            <districtcode>8402</districtcode>
+            <districtname>Kalama School District</districtname>
+        </row>
+        <row _position="323">
+            <districtcode>8404</districtcode>
+            <districtname>Woodland School District</districtname>
+        </row>
+        <row _position="324">
+            <districtcode>8458</districtcode>
+            <districtname>Kelso School District</districtname>
+        </row>
+        <row _position="325">
+            <districtcode>9013</districtcode>
+            <districtname>Orondo School District</districtname>
+        </row>
+        <row _position="326">
+            <districtcode>9075</districtcode>
+            <districtname>Bridgeport School District</districtname>
+        </row>
+        <row _position="327">
+            <districtcode>9102</districtcode>
+            <districtname>Palisades School District</districtname>
+        </row>
+        <row _position="328">
+            <districtcode>9206</districtcode>
+            <districtname>Eastmont School District</districtname>
+        </row>
+        <row _position="329">
+            <districtcode>9207</districtcode>
+            <districtname>Mansfield School District</districtname>
+        </row>
+        <row _position="330">
+            <districtcode>9209</districtcode>
+            <districtname>Waterville School District</districtname>
+        </row>
+        <row _position="331">
+            <districtname>State Total</districtname>
+        </row>
+    </rows>
+</response>

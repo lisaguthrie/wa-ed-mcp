@@ -1,7 +1,7 @@
 {
-  "primary_district_id": "17414",
+  "focus_district_id": "17414",
   "latest_assessment_year": 2025,
-  "benchmark_sets": [
+  "multidistrict_sets": [
     {
       "id": "DEFAULT",
       "name": "LWSD's Benchmark Districts",
@@ -18,6 +18,11 @@
       "id": "MEDIUM",
       "name": "Medium benchmark set",
       "districts": ["17414", "17405", "6117", "17411", "17400"]
+    },
+    {
+      "id": "ONE",
+      "name": "LWSD only",
+      "districts": ["17414"]
     }
   ],
   "assessment_sets": [
@@ -43,7 +48,7 @@
     },
     {
       "year": 2021,
-      "url": "https://data.wa.gov/api/v3/views/292v-tb9r/query.json"
+      "url": "https://data.wa.gov/api/v3/views/2ctu-fcyb/query.json"
     },
     {
       "year": 2022,
@@ -61,5 +66,44 @@
       "year": 2025,
       "url": "https://data.wa.gov/api/v3/views/h5d9-vgwi/query.json"
     }
+  ],
+  "enrollment_sets": [
+    {
+      "year": "all",
+      "url": "https://data.wa.gov/api/v3/views/rxjk-6ieq/query.json"
+    }
+  ],
+  "enrollment_student_groups": [
+    "all_students",
+    "female",
+    "male",
+    "gender_x",
+    "american_indian_alaskan_native",
+    "asian",
+    "black_african_american",
+    "hispanic_latino_of_any_race",
+    "native_hawaiian_pacific_islander",
+    "two_or_more_races",
+    "white",
+    "english_language_learners",
+    "non_english_language_learners",
+    "fostercare",
+    "non_fostercare",
+    "highly_capable",
+    "non_highly_capable",
+    "homeless",
+    "non_homeless",
+    "low_income",
+    "non_low_income",
+    "migrant",
+    "non_migrant",
+    "military_parent",
+    "non_military_parent",
+    "mobile",
+    "non_mobile",
+    "section_504",
+    "non_section_504",
+    "students_with_disabilities",
+    "students_without_disabilities"
   ]
 }

@@ -1,43 +1,69 @@
 from mcp.server.fastmcp import FastMCP
 import json
 import os
-import requests
-from urllib.parse import quote
+#import requests
+#from urllib.parse import quote
 import xml.etree.ElementTree as ET
+from collections import defaultdict
+import enrollment_tools
+from utils import *
 
 # Load environment variables
 from dotenv import load_dotenv
 load_dotenv()
 
-CONFIG_FILE_NAME = "wa-ed-config.json"
-
 mcp = FastMCP("WA Education MCP")
 
-config_file = os.path.join(os.path.dirname(__file__), CONFIG_FILE_NAME)
-with open(config_file) as f:
-    config_data = json.load(f)
+config_data = load_config()
+
+def load_districts():
+    """Load district codes and names for easy querying"""
+    districts = {}
+    tree = ET.parse(os.path.join(os.path.dirname(__file__), "Districts.xml"))
+    root = tree.getroot()
+    for row in root.findall(".//row"):
+        code = row.findtext("districtcode")
+        name = row.findtext("districtname")
+        if code and name:
+            districts[code] = name
+    return districts
 
 DISTRICTS = load_districts()
 
-PRIMARY_DISTRICT_ID = config_data.get("primary_district_id", "17414")
+FOCUS_DISTRICT_ID = config_data.get("focus_district_id", "17414")
 DEFAULT_ASSESSMENT_YEAR = config_data.get("latest_assessment_year", 2025)
 
-@mcp.tool()
-def get_district_scores(district_ids: list = [PRIMARY_DISTRICT_ID], tests: list = ["SBAC", "AIM", "WCAS"], subject: str = "ELA", grade: int = 3, student_groups: list = ["All Students"], year: int = DEFAULT_ASSESSMENT_YEAR):
-    """Get test scores for a specified list of one or more districts"""
+enrollment_tools.register_tools(mcp)
 
-    # Annoyingly, OSPI likes to change the name of the column that indicates the number of
-    # students who were "at or above standard" (L3 or L4) in different datasets...
+@mcp.tool()
+def get_district_scores(district_ids: list = [FOCUS_DISTRICT_ID], tests: list = ["SBAC", "AIM", "WCAS"], subject: str = "ELA", grade: int = 3, student_groups: list = ["All Students"], year: int = DEFAULT_ASSESSMENT_YEAR):
+    """Get raw test scores for a specified list of one or more districts. Do NOT manually compute rankings or trends using this raw data. Use analyze_benchmark_trends or analyze_district_trends instead."""
+    # Annoyingly, the data in the various annual datasets is essentially unchanged, but OSPI likes to change
+    # around column names. Here we normalize the column names we need to use based on year.
     met_standard_column = "count_consistent_grade_level"
-    if (year < 2023):
+    total_students_column = "count_of_students_expected"
+    dat_column = "DAT"
+    grade_adjusted = grade
+    if (year == 2021):
+        met_standard_column = "numeratorsuppressed"
+        total_students_column = "denominatorsuppressed"
+        dat_column = "Suppression"
+        # 2020-21 data is extra-funky because the test was given in the fall of 2021, rather than the spring
+        # (due to COVID-19). So the students were a grade level older than expected, i.e. the kids who took
+        # the 3rd grade test are listed as 4th graders in the data. Adjust accordingly to match other years.
+        grade_adjusted = grade + 1
+    elif (year < 2023):
         met_standard_column = "countmetstandard"
+        dat_column = "Suppression"
     elif (year in [2023, 2024]):
         met_standard_column = "count_consistent_grade_level_knowledge_and_above"
 
-    # Same for the column with data suppression info...
-    dat_column = "DAT"
-    if (year < 2023):
-        dat_column = "Suppression"
+    # Also annoyingly, the "two or more races" student group is sometimes called TwoorMoreRaces.
+    # If there is a student group that starts with "Two" then make sure both versions are added.
+    if any(group.startswith("Two") for group in student_groups):
+        student_groups = student_groups.copy() # work with a copy to avoid modifying caller's list
+        student_groups.append("TwoorMoreRaces")
+        student_groups.append("Two Or More Races")
 
     # Define the query to use against the data.wa.gov portal
     query = f"""SELECT
@@ -51,11 +77,11 @@ def get_district_scores(district_ids: list = [PRIMARY_DISTRICT_ID], tests: list 
   `testadministration`,
   `testsubject`,
   `{met_standard_column}` AS `count_consistent_grade_level`,
-  `count_of_students_expected`,
+  `{total_students_column}` AS `count_of_students_expected`,
   `{dat_column}` AS `DAT`
 WHERE
   caseless_eq(`organizationlevel`, "District")
-  AND caseless_eq(`gradelevel`, "{get_grade(grade)}")
+  AND caseless_eq(`gradelevel`, "{get_grade(grade_adjusted)}")
   AND caseless_one_of(`testadministration`, "{get_list_as_string(tests)}")
   AND caseless_one_of(`testsubject`, "{subject}")
   AND caseless_one_of(`districtcode`, "{get_list_as_string(district_ids)}")
@@ -64,7 +90,7 @@ WHERE
     """
 
     # Execute the query and get the JSON response
-    response = execute_query(year, query)
+    response = execute_assessment_query(year, query)
     if "error" in response:
         return response
 
@@ -75,6 +101,9 @@ WHERE
     aggregated_scores = {}
     for record in response:
         studentgroup = record.get("studentgroup")
+        studentgroup_adjusted = studentgroup
+        if studentgroup == "TwoorMoreRaces":
+            studentgroup_adjusted = "Two Or More Races"
         district_id = record.get("districtcode")
 
         if not studentgroup:
@@ -84,17 +113,17 @@ WHERE
 
         # Create the dictionary entries for studentgroup and district_id, if
         # they don't already exist.
-        if (studentgroup not in aggregated_scores):
-            aggregated_scores[studentgroup] = {}
-        if (district_id not in aggregated_scores[studentgroup]):
+        if (studentgroup_adjusted not in aggregated_scores):
+            aggregated_scores[studentgroup_adjusted] = {}
+        if (district_id not in aggregated_scores[studentgroup_adjusted]):
             # Initialize each district's results for each student group to 0.
-            aggregated_scores[studentgroup][district_id] = {
+            aggregated_scores[studentgroup_adjusted][district_id] = {
                 "total_students": 0,
                 "consistent_grade_level": 0
             }
 
-        # Add this record's student numbers to the totals for this district        
-        result = aggregated_scores.get(studentgroup).get(district_id)
+        # Add this record's student numbers to the totals for this district
+        result = aggregated_scores.get(studentgroup_adjusted).get(district_id)
         if result:
             total_str = record.get("count_of_students_expected", "0")
             if total_str == "NULL": total_str = "0"
@@ -106,6 +135,7 @@ WHERE
             except:
                 return {"error": "Error converting student counts to integers",
                         "studentgroup": studentgroup,
+                        "studentgroup_adjusted": studentgroup_adjusted,
                         "district_id": district_id,
                         "year": year,
                         "record": record
@@ -113,10 +143,9 @@ WHERE
 
     # Use the aggregated results to calculate percentages
     results = []
-    for studentgroup in aggregated_scores:
-        for district_id in aggregated_scores[studentgroup]:
-            result_data = aggregated_scores[studentgroup][district_id]
-            
+    for studentgroup_adjusted in aggregated_scores:
+        for district_id in aggregated_scores[studentgroup_adjusted]:
+            result_data = aggregated_scores[studentgroup_adjusted][district_id]
             # Calculate percentage
             percent = None
             try:
@@ -126,13 +155,14 @@ WHERE
             except:
                 return {"error": "Error calculating percentage of students at grade level",
                         "studentgroup": studentgroup,
+                        "studentgroup_adjusted": studentgroup_adjusted,
                         "district_id": district_id,
                         "year": year,
                         "result_data": result_data
                        }
-            
+
             results.append({
-                "student_group": studentgroup,
+                "student_group": studentgroup_adjusted,
                 "district_id": district_id,
                 "total_students": result_data["total_students"],
                 "consistent_grade_level": result_data["consistent_grade_level"],
@@ -143,50 +173,105 @@ WHERE
         "year": year,
         "subject": subject,
         "grade": grade,
-        "results": results
+        "results": results,
+        "query": query
     }
 
 @mcp.tool()
-def analyze_benchmark_trends(focus_district_id: str = PRIMARY_DISTRICT_ID, benchmark_set_id: str = "DEFAULT", subject: str = "ELA", grade: int = 3, student_group: str = "All Students", years: list = [2022, 2023, 2024, 2025]):
-    """Analyze trends in benchmark scores for a set of benchmark districts across multiple years."""
-    benchmark_scores = get_benchmark_scores(
-        benchmark_set_id=benchmark_set_id,
+def analyze_trends(focus_district_id: str = FOCUS_DISTRICT_ID, multidistrict_set_id: str = "DEFAULT", subject: str = "ELA", grade: int = 3, student_groups: list = ["All Students", "Low-Income"], year: int = DEFAULT_ASSESSMENT_YEAR, yearspan: int = 4):
+    """Analyze trends in scores for one or more districts across multiple years. Returns authoritative rankings across multiple districts and trends across multiple years. Use this tool whenever multi-district ranking or trend logic is required. Do NOT compute rankings or trends manually."""
+    first_year = year - yearspan + 1
+    last_year = year
+
+    if (first_year <= 2020 and last_year > 2020): # adjust for no state testing in 2020
+        first_year = first_year - 1
+        yearspan = yearspan + 1
+
+    benchmark_scores = get_multidistrict_scores(
+        multidistrict_set_id=multidistrict_set_id,
         subject=subject,
         grade=grade,
-        student_groups=[student_group],
-        years=years
+        student_groups=student_groups,
+        years=list(range(first_year, last_year + 1))
     )
     if "error" in benchmark_scores:
         return benchmark_scores
 
-    ranked_scores = { "ranked_results": [] }
-    for year_scores in benchmark_scores.get("results", []):
-        ranked_scores["ranked_results"].append(get_district_rankings(year_scores))
+    analysis = { "ranked_results": [], "annual_trends": [] }
+    for student_group in benchmark_scores.get("student_groups", []):
+        for year_scores in benchmark_scores.get("results", []):
+            analysis["ranked_results"].append(get_district_rankings(year_scores, student_group))
 
-    return ranked_scores
+        analysis["annual_trends"].append(get_annual_trends(benchmark_scores, first_year, last_year, student_group))
 
-def get_district_rankings(scores: dict):
-    sorted_records = sorted(scores.get("data", []), key=lambda x: (x.get("percent_consistent_grade_level") is not None, x.get("percent_consistent_grade_level")), reverse=True)
-    
+    return analysis
+
+def get_annual_trends(scores: dict, first_year, last_year, student_group) -> dict:
+    first_year_scores = next((record for record in scores.get("results", []) if record.get("year") == first_year), None)
+    last_year_scores = next((record for record in scores.get("results", []) if record.get("year") == last_year), None)
+
+    trends_by_district = []
+
+    for last_record in last_year_scores.get("data", []):
+        if last_record.get("student_group") != student_group:
+            continue
+
+        district_id = last_record.get("district_id")
+        first_record = next((r for r in first_year_scores.get("data", []) if r.get("district_id") == district_id and r.get("student_group") == student_group), None)
+        if not first_record:
+            continue
+
+        first_percent = first_record.get("percent_consistent_grade_level", None)
+        last_percent = last_record.get("percent_consistent_grade_level", None)
+
+        if first_percent is None or last_percent is None:
+            continue
+
+        annual_trend = (last_percent - first_percent) / (last_year - first_year + 1)
+
+        trends_by_district.append({
+            "district_id": district_id,
+            "first_year_percent": first_percent,
+            "last_year_percent": last_percent,
+            "annual_trend": round(annual_trend, 2)
+        })
+
+    return {
+        "student_group": student_group,
+        "first_year": first_year,
+        "last_year": last_year,
+        "trends_by_district": trends_by_district
+    }
+
+def get_district_rankings(scores: dict, student_group: str) -> dict:
+    # Filter scores to only include the specified student group. Make copies of each record tnat we include,
+    # so we don't modify the original data.
+    filtered_scores = [record.copy() for record in scores.get("data", []) if record.get("student_group", "Unknown") == student_group]
+
+    sorted_records = sorted(filtered_scores, key=lambda x: (x.get("percent_consistent_grade_level") is not None, x.get("percent_consistent_grade_level")), reverse=True)
+
     for rank, record in enumerate(sorted_records, start=1):
         record["rank"] = rank
+        record.pop("student_group", None)  # remove redundant student_group field
 
     return {
         "year": scores.get("year"),
-        "data_ranked": sorted_records
+        "student_group": student_group,
+        "ranked_data": sorted_records
     }
 
-@mcp.tool()
-def get_benchmark_scores(benchmark_set_id: str = "DEFAULT", subject: str = "ELA", grade: int = 3, student_groups: list = ["All Students"], years: list = [2022, 2023, 2024, 2025]):
-    """Get benchmark scores for a set of districts across multiple years."""
-    benchmark_set = next((b for b in config_data["benchmark_sets"] if b["id"] == benchmark_set_id), None)
-    if not benchmark_set:
-        return {"error": f"Benchmark set {benchmark_set_id} not found"}
-
+def get_multidistrict_scores(multidistrict_set_id: str = "DEFAULT", subject: str = "ELA", grade: int = 3, student_groups: list = ["All Students"], years: list = [2022, 2023, 2024, 2025]):
+    """Get scores for a set of multiple districts across multiple years."""
+    multidistrict_set = next((b for b in config_data["multidistrict_sets"] if b["id"] == multidistrict_set_id), None)
+    if not multidistrict_set:
+        return {"error": f"Multidistrict set {multidistrict_set_id} not found"}
     results = { "results": [] }
     for year in years:
+        if year == 2020: # skip 2020, no testing data
+            continue
+
         scores = get_district_scores(
-            district_ids=benchmark_set["districts"],
+            district_ids=multidistrict_set["districts"],
             subject=subject,
             grade=grade,
             student_groups=student_groups,
@@ -201,7 +286,7 @@ def get_benchmark_scores(benchmark_set_id: str = "DEFAULT", subject: str = "ELA"
         })
 
     return {
-        "benchmark_set_id": benchmark_set_id,
+        "multidistrict_set_id": multidistrict_set_id,
         "subject": subject,
         "grade": grade,
         "student_groups": student_groups,
@@ -210,16 +295,12 @@ def get_benchmark_scores(benchmark_set_id: str = "DEFAULT", subject: str = "ELA"
     }
 
 @mcp.tool()
-def get_district_name(district_id: str = PRIMARY_DISTRICT_ID) -> dict:
+def get_district_name(district_id: str = FOCUS_DISTRICT_ID) -> dict:
     """Get the name of a district given its ID."""
     if district_id in DISTRICTS:
         return {"district_id": district_id, "district_name": DISTRICTS[district_id]}
     else:
         return {"error": f"District ID {district_id} not found"}
-
-def get_school_year(year: int) -> str:
-    """Convert a year to a school year string."""
-    return f"{year-1}-{str(year)[-2:]}"
 
 def get_grade(grade: int) -> str:
     if grade < 10:
@@ -227,22 +308,13 @@ def get_grade(grade: int) -> str:
     else:
         return str(grade)
 
-def execute_query(year: int, query_string: str) -> str:
+def execute_assessment_query(year: int, query_string: str) -> dict:
     """Execute a query against the data.wa.gov portal for a given year and return results, with proper error handling."""
     assessment_set = next((a for a in config_data["assessment_sets"] if a["year"] == year), None)
     if not assessment_set:
         return {"error": f"Assessment dataset for year {year} not found"}
     
-    query = f"{assessment_set['url']}?app_token={os.getenv('DATA_PORTAL_APP_TOKEN')}&query={quote(query_string)}"
-    response = requests.get(query, timeout=10)
-    try:
-        response.raise_for_status() 
-    except requests.exceptions.HTTPError as e:
-        return {"error": str(e), "url": query, "query": query_string, "status_code": response.status_code}
-    except requests.exceptions.RequestException as e:
-        return {"error": str(e), "url": query, "query": query_string}
-
-    return response.json()
+    return execute_query(assessment_set["url"], query_string)
 
 def get_list_as_string(items: list) -> str:
     """Convert a list of items to a string for use in a query."""
@@ -251,12 +323,20 @@ def get_list_as_string(items: list) -> str:
     return list_str
 
 @mcp.tool()
-def list_benchmark_sets():
-    """List available benchmark district sets."""
-    return config_data["benchmark_sets"]
+def list_multidistrict_sets():
+    """List available multidistrict sets."""
+    return config_data["multidistrict_sets"]
 
 @mcp.tool()
-def list_available_years():
+def get_multidistrict_set(multidistrict_set_id: str) -> dict:
+    """Get details of a specific multidistrict set."""
+    multidistrict_set = next((b for b in config_data["multidistrict_sets"] if b["id"] == multidistrict_set_id), None)
+    if not multidistrict_set:
+        return {"error": f"Multidistrict set {multidistrict_set_id} not found"}
+    return multidistrict_set
+
+@mcp.tool()
+def list_available_assessment_years():
     """List all available assessment years."""
     return [a["year"] for a in config_data["assessment_sets"]]
 
@@ -266,7 +346,7 @@ def list_available_tests(year: int = DEFAULT_ASSESSMENT_YEAR):
     query = """SELECT `testadministration`, `testsubject`, `gradelevel`
 GROUP BY `testadministration`, `testsubject`, `gradelevel`
 HAVING caseless_ne(`gradelevel`, "All Grades")"""
-    response = execute_query(year, query)
+    response = execute_assessment_query(year, query)
     if "error" in response:
         return response
     
@@ -282,19 +362,7 @@ def list_available_student_groups(year: int = DEFAULT_ASSESSMENT_YEAR):
 GROUP BY `studentgrouptype`, `studentgroup`
 ORDER BY `studentgrouptype`"""
 
-    return execute_query(year, query)
-
-def load_districts():
-    """Load district codes and names for easy querying"""
-    districts = {}
-    tree = ET.parse(os.path.join(os.path.dirname(__file__), "Districts.xml"))
-    root = tree.getroot()
-    for row in root.findall(".//row"):
-        code = row.findtext("districtcode")
-        name = row.findtext("districtname")
-        if code and name:
-            districts[code] = name
-    return districts
+    return execute_assessment_query(year, query)
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")

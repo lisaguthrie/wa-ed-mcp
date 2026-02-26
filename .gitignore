@@ -1,3 +1,37 @@
 .env
 test.py
 .claude/settings.local.json
+run.bat
+enrollment-by-year-prompt.txt
+# Python virtual environments
+.wa-ed-mcp/
+venv/
+
+# Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables and secrets
+.env.*
+
+# Test and debug outputs
+*.log
+*.json
+*.csv
+
+# Editor and IDE files
+.vscode/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Windows batch files
+*.bat
+
+# Miscellaneous
+*.~
